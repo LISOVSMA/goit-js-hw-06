@@ -12,8 +12,9 @@ function onInputBlur(event) {
 
   if (Number(inputEl.dataset.length) === targetLength) {
     inputEl.classList.add("valid");
-    return;
+    inputEl.classList.remove("invalid");
+  } else {
+    inputEl.classList.add("invalid");
+    inputEl.classList.remove("valid");
   }
-
-  inputEl.classList.add("invalid");
 }
